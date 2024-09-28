@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/40f8247f4b.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-gradient-to-t from-[#fbc2eb] to-[#a6c1ee] h-screen"> 
+
+    <header class="bg-white">
+        <nav class="flex justify-between items-center w-[92vw] m-auto">
+            <div>
+                <img class="w-16" src="https://img.freepik.com/free-vector/colorful-bird-illustration-gradient_343694-1741.jpg?t=st=1723623183~exp=1723626783~hmac=7cdc1f271609098c5a7dd0c7b75775bd89359423e3038ae4bd1e1f46fefcfc6b&w=740" alt="">
+            </div>
+
+            <div>
+             <ul class=" items-center gap-[4vw] hidden md:flex ">
+                <li>
+                    <a href="#">Products</a>
+                </li>
+                <li>
+                    <a href="#">Solutions</a>
+                </li>
+                <li>
+                    <a href="#">Resources</a>
+                </li>
+                <li>
+                    <a href="#">Developers</a>
+                </li>
+                <li>
+                    <a href="#">Pricing</a>
+                </li>
+             </ul>
+            </div>
+            <div>
+                <button class="bg-[#a6c1ee] text-white px-5 py-2 rounded-full hover:bg-[#87acec] hidden md:block">Sign In</button>
+            </div>
+
+            <div class="text-gray-600 cursor-pointer md:hidden" onclick="handleMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+
+            <!-- Drop down for mobile -->
+            
+            
+            
+        </nav>
+
+    </header>
+
+</body>
+<script src="./script.js"></script>
+</html>
