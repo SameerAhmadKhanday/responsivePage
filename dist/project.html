@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TailWid Project</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/40f8247f4b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="overflow-x-hidden">
+    <nav class=" p-3 flex bg-white justify-between items-center fixed top-0 left-0 right-0 z-20 shadow-md  ">
+        <a href="#" id="brand"  class="flex gap-2 items-center">
+            <img  src="https://img.freepik.com/premium-photo/alphabet-s-english-colorful-letters-handmade-letters-molded-from-plasticine-clay-isolated-white-background_44074-7066.jpg?w=900" alt="" class="h-10 w-15 object-cover max-w-12 max-h-12">
+            <span class="text-lg font-bold font-mono">Sameer</span>
+        </a>
+
+        <!-- navmenu -->
+         <div class=" hidden md:flex  gap-12">
+            <a href="#" class="font-medium hover:text-blue-400">Pricing</a>
+            <a href="#" class="font-medium hover:text-blue-400">Docs</a>
+            <a href="#" class="font-medium hover:text-blue-400">Changelog</a>
+            <a href="#" class="font-medium hover:text-blue-400">Blogs</a>
+            <a href="#" class="font-medium hover:text-blue-400">Login</a>
+         </div>
+
+        <button class="hidden md:flex gap-2 items-center border border-gray-400 hover:border-gray-900 px-6 py-2 rounded-full  ">
+            <i class="fa-solid fa-user"></i>
+            <span>sameer</span>
+            <i class="fa-solid fa-arrow-right"></i>
+        </button>
+        
+
+
+        <button class="p-2 md:hidden" onclick="handleMenu()">
+            <i class="fa-solid fa-bars  text-gray-600 "></i>
+        </button>
+
+        <!-- dropDown   -->
+        <div id="navDialog" class="fixed hidden md:hidden bg-white inset-0 p-3">
+            <div id="nav-bar " class="flex justify-between">
+                <a href="#" id="brand"  class="flex gap-2 items-center">
+                    <img  src="https://img.freepik.com/premium-photo/alphabet-s-english-colorful-letters-handmade-letters-molded-from-plasticine-clay-isolated-white-background_44074-7066.jpg?w=900" alt="" class="h-10 w-15 object-cover max-w-12 max-h-12">
+                    <span class="text-lg font-bold font-mono">Sameer</span>
+                </a>
+                <button class="p-2 md:hidden" onclick="handleMenu()">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                
+            </div>
+
+            <div class="mt-6">
+                <a href="#" class="font-medium m-3 p-3 hover:bg-gray-100 block rounded-lg">Pricing</a>
+                <a href="#" class="font-medium m-3 p-3 hover:bg-gray-100 block rounded-lg">Docs</a>
+                <a href="#" class="font-medium m-3 p-3 hover:bg-gray-100 block rounded-lg">changelog</a>
+                <a href="#" class="font-medium m-3 p-3 hover:bg-gray-100 block rounded-lg">Blog</a>
+                <a href="#" class="font-medium m-3 p-3 hover:bg-gray-100 block rounded-lg">Login</a>
+
+                
+            </div>
+
+            <div class="h-[1px] bg-gray-300">
+               
+            </div>
+            <button class="w-full mt-6 flex gap-2 items-center hover:bg-gray-100 px-6 py-4 rounded-full  ">
+                <i class="fa-solid fa-user"></i>
+                <span>sameer</span>
+                
+            </button>
+
+            
+        </div>
+
+    </nav>
+
+    <!-- main -->
+     <main class="mt-12">
+        <!-- hero section -->
+         <div id="hero" class="min-h-screen  bg-gradient-to-b from-purple-50 to via-orange-50 to-transparent  ">
+            <div id="heroContainer" class="max-w-4xl mx-auto px-6 pt-6 py-6 pb-32 flex flex-col sm:items-center sm:text-center">
+
+                <div id="version-text " class="flex my-6 gap-2 items-center border border-yellow-300 bg-yellow-50 rounded-lg px-3 py-1 w-fit shadow-md hover:shadow-lg hover:-translate-y-1 transition group">
+                    <div class="w-2 h-2 bg-yellow-400 rounded-full border  border-yellow-600"></div>
+                    <p class="font-medium text-yellow-600">vO.21.1: <span class="text-yellow-800">Find-in-page bug fixes</span> </p>
+                    <i class="fa-solid fa-arrow-right text-yellow-600 group-hover:translate-x-1 transition duration-300"></i>
+                </div>
+
+                <div id="heroFeatures" class=" gap-8 my-6 hidden md:flex">
+                    <div class="flex justify-center gap-2  items-center text-gray-500">
+                        <i class="fa-solid fa-file-code"></i>
+                        <p>Code Optional</p>
+                    </div>
+                    <div class="flex justify-center gap-2  items-center text-gray-500">
+                        <i class="fa-solid fa-puzzle-piece"></i>
+                        <p>Drap & drop builder</p>
+                    </div>
+                    <div class="flex justify-center gap-2  items-center text-gray-500">
+                        <i class="fa-solid fa-laptop"></i>
+                        <p>Window,Mac,Linux</p>
+                    </div>
+                    
+                    
+                </div>
+
+                <h1 class="text-4xl text-gray-900 font-semibold leading-snug sm:text-6xl pt-6">Web app to desktop app in minutes</h1>
+                <p class="text-xl mt-4 sm:text-2xl sm:mt-8 text-gray-800">Take your web app codebase and transform into a crosss platform desktop app with native function</p>
+
+
+                <div id="buttonContainer" class="mt-12 flex gap-4 flex-col  sm:flex-row">
+                    <button class="px-8 py-3 font-semibold rounded-lg text-white bg-blue-600 shadow-sm hover:bg-opacity-90 ">Download now</button>
+                    <button class="px-8 py-3 font-semibold rounded-lg bg-white border border-gray-400 hover:border-gray-800">Read Docs</button>
+                </div>
+            </div> 
+
+            <!-- companies container  -->
+             <div id="companies-container" class="mt-16 px-4">
+                <div id="companies-title" class="flex justify-center gap-8 items-center">
+                    <i class="fa-solid fa-arrow-turn-down translate-y-6 -scale-x-100"></i>
+                    <span class="font-medium">APPS POWERED BY SAMEER</span>
+                    <i class="fa-solid fa-arrow-turn-down translate-y-6"></i>
+                 </div>
+                 <div id="lines-group" class="flex flex-col gap-4 mt-8">
+                    <div id="line1" class="flex gap-4 w-screen -translate-x-48 transition-transform ease-linear">
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img class="w-14 h-14 md:w-16 md:h-16" src="https://img.freepik.com/free-vector/cute-rabbit-bite-carrot-cartoon-vector-icon-illustration-animal-nature-icon-concept-isolated-flat_138676-7366.jpg?t=st=1724734621~exp=1724738221~hmac=2aa373ec4f14b4cf9ce0afbbbf7be6d427733adcc6eb7d516b83d834e2ecb301&w=740" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img class="w-14 h-14 md:w-16 md:h-16" src="https://img.freepik.com/free-vector/cute-rabbit-bite-carrot-cartoon-vector-icon-illustration-animal-nature-icon-concept-isolated-flat_138676-7366.jpg?t=st=1724734621~exp=1724738221~hmac=2aa373ec4f14b4cf9ce0afbbbf7be6d427733adcc6eb7d516b83d834e2ecb301&w=740" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img class="w-14 h-14 md:w-16 md:h-16" src="https://img.freepik.com/free-vector/cute-rabbit-bite-carrot-cartoon-vector-icon-illustration-animal-nature-icon-concept-isolated-flat_138676-7366.jpg?t=st=1724734621~exp=1724738221~hmac=2aa373ec4f14b4cf9ce0afbbbf7be6d427733adcc6eb7d516b83d834e2ecb301&w=740" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img class="w-14 h-14 md:w-16 md:h-16" src="https://img.freepik.com/free-vector/cute-rabbit-bite-carrot-cartoon-vector-icon-illustration-animal-nature-icon-concept-isolated-flat_138676-7366.jpg?t=st=1724734621~exp=1724738221~hmac=2aa373ec4f14b4cf9ce0afbbbf7be6d427733adcc6eb7d516b83d834e2ecb301&w=740" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img class="w-14 h-14 md:w-16 md:h-16" src="https://img.freepik.com/free-vector/cute-rabbit-bite-carrot-cartoon-vector-icon-illustration-animal-nature-icon-concept-isolated-flat_138676-7366.jpg?t=st=1724734621~exp=1724738221~hmac=2aa373ec4f14b4cf9ce0afbbbf7be6d427733adcc6eb7d516b83d834e2ecb301&w=740" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img class="w-14 h-14 md:w-16 md:h-16" src="https://img.freepik.com/free-vector/cute-rabbit-bite-carrot-cartoon-vector-icon-illustration-animal-nature-icon-concept-isolated-flat_138676-7366.jpg?t=st=1724734621~exp=1724738221~hmac=2aa373ec4f14b4cf9ce0afbbbf7be6d427733adcc6eb7d516b83d834e2ecb301&w=740" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img class="w-14 h-14 md:w-16 md:h-16" src="https://img.freepik.com/free-vector/cute-rabbit-bite-carrot-cartoon-vector-icon-illustration-animal-nature-icon-concept-isolated-flat_138676-7366.jpg?t=st=1724734621~exp=1724738221~hmac=2aa373ec4f14b4cf9ce0afbbbf7be6d427733adcc6eb7d516b83d834e2ecb301&w=740" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img class="w-14 h-14 md:w-16 md:h-16" src="https://img.freepik.com/free-vector/cute-rabbit-bite-carrot-cartoon-vector-icon-illustration-animal-nature-icon-concept-isolated-flat_138676-7366.jpg?t=st=1724734621~exp=1724738221~hmac=2aa373ec4f14b4cf9ce0afbbbf7be6d427733adcc6eb7d516b83d834e2ecb301&w=740" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img class="w-14 h-14 md:w-16 md:h-16" src="https://img.freepik.com/free-vector/cute-rabbit-bite-carrot-cartoon-vector-icon-illustration-animal-nature-icon-concept-isolated-flat_138676-7366.jpg?t=st=1724734621~exp=1724738221~hmac=2aa373ec4f14b4cf9ce0afbbbf7be6d427733adcc6eb7d516b83d834e2ecb301&w=740" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img class="w-14 h-14 md:w-16 md:h-16" src="https://img.freepik.com/free-vector/cute-rabbit-bite-carrot-cartoon-vector-icon-illustration-animal-nature-icon-concept-isolated-flat_138676-7366.jpg?t=st=1724734621~exp=1724738221~hmac=2aa373ec4f14b4cf9ce0afbbbf7be6d427733adcc6eb7d516b83d834e2ecb301&w=740" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img class="w-14 h-14 md:w-16 md:h-16" src="https://img.freepik.com/free-vector/cute-rabbit-bite-carrot-cartoon-vector-icon-illustration-animal-nature-icon-concept-isolated-flat_138676-7366.jpg?t=st=1724734621~exp=1724738221~hmac=2aa373ec4f14b4cf9ce0afbbbf7be6d427733adcc6eb7d516b83d834e2ecb301&w=740" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img class="w-14 h-14 md:w-16 md:h-16" src="https://img.freepik.com/free-vector/cute-rabbit-bite-carrot-cartoon-vector-icon-illustration-animal-nature-icon-concept-isolated-flat_138676-7366.jpg?t=st=1724734621~exp=1724738221~hmac=2aa373ec4f14b4cf9ce0afbbbf7be6d427733adcc6eb7d516b83d834e2ecb301&w=740" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                    </div>
+                    <div id="line2" class="flex gap-4 w-screen -translate-x-36 transition-transform ease-linear">
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img class="w-14 h-14 md:w-16 md:h-16" src="https://img.freepik.com/free-vector/cute-rabbit-bite-carrot-cartoon-vector-icon-illustration-animal-nature-icon-concept-isolated-flat_138676-7366.jpg?t=st=1724734621~exp=1724738221~hmac=2aa373ec4f14b4cf9ce0afbbbf7be6d427733adcc6eb7d516b83d834e2ecb301&w=740" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img class="w-14 h-14 md:w-16 md:h-16" src="https://img.freepik.com/free-vector/cute-rabbit-bite-carrot-cartoon-vector-icon-illustration-animal-nature-icon-concept-isolated-flat_138676-7366.jpg?t=st=1724734621~exp=1724738221~hmac=2aa373ec4f14b4cf9ce0afbbbf7be6d427733adcc6eb7d516b83d834e2ecb301&w=740" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img class="w-14 h-14 md:w-16 md:h-16" src="https://img.freepik.com/free-vector/cute-rabbit-bite-carrot-cartoon-vector-icon-illustration-animal-nature-icon-concept-isolated-flat_138676-7366.jpg?t=st=1724734621~exp=1724738221~hmac=2aa373ec4f14b4cf9ce0afbbbf7be6d427733adcc6eb7d516b83d834e2ecb301&w=740" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img class="w-14 h-14 md:w-16 md:h-16" src="https://img.freepik.com/free-vector/cute-rabbit-bite-carrot-cartoon-vector-icon-illustration-animal-nature-icon-concept-isolated-flat_138676-7366.jpg?t=st=1724734621~exp=1724738221~hmac=2aa373ec4f14b4cf9ce0afbbbf7be6d427733adcc6eb7d516b83d834e2ecb301&w=740" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img class="w-14 h-14 md:w-16 md:h-16" src="https://img.freepik.com/free-vector/cute-rabbit-bite-carrot-cartoon-vector-icon-illustration-animal-nature-icon-concept-isolated-flat_138676-7366.jpg?t=st=1724734621~exp=1724738221~hmac=2aa373ec4f14b4cf9ce0afbbbf7be6d427733adcc6eb7d516b83d834e2ecb301&w=740" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img class="w-14 h-14 md:w-16 md:h-16" src="https://img.freepik.com/free-vector/cute-rabbit-bite-carrot-cartoon-vector-icon-illustration-animal-nature-icon-concept-isolated-flat_138676-7366.jpg?t=st=1724734621~exp=1724738221~hmac=2aa373ec4f14b4cf9ce0afbbbf7be6d427733adcc6eb7d516b83d834e2ecb301&w=740" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img class="w-14 h-14 md:w-16 md:h-16" src="https://img.freepik.com/free-vector/cute-rabbit-bite-carrot-cartoon-vector-icon-illustration-animal-nature-icon-concept-isolated-flat_138676-7366.jpg?t=st=1724734621~exp=1724738221~hmac=2aa373ec4f14b4cf9ce0afbbbf7be6d427733adcc6eb7d516b83d834e2ecb301&w=740" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img class="w-14 h-14 md:w-16 md:h-16" src="https://img.freepik.com/free-vector/cute-rabbit-bite-carrot-cartoon-vector-icon-illustration-animal-nature-icon-concept-isolated-flat_138676-7366.jpg?t=st=1724734621~exp=1724738221~hmac=2aa373ec4f14b4cf9ce0afbbbf7be6d427733adcc6eb7d516b83d834e2ecb301&w=740" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img class="w-14 h-14 md:w-16 md:h-16" src="https://img.freepik.com/free-vector/cute-rabbit-bite-carrot-cartoon-vector-icon-illustration-animal-nature-icon-concept-isolated-flat_138676-7366.jpg?t=st=1724734621~exp=1724738221~hmac=2aa373ec4f14b4cf9ce0afbbbf7be6d427733adcc6eb7d516b83d834e2ecb301&w=740" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img class="w-14 h-14 md:w-16 md:h-16" src="https://img.freepik.com/free-vector/cute-rabbit-bite-carrot-cartoon-vector-icon-illustration-animal-nature-icon-concept-isolated-flat_138676-7366.jpg?t=st=1724734621~exp=1724738221~hmac=2aa373ec4f14b4cf9ce0afbbbf7be6d427733adcc6eb7d516b83d834e2ecb301&w=740" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img class="w-14 h-14 md:w-16 md:h-16" src="https://img.freepik.com/free-vector/cute-rabbit-bite-carrot-cartoon-vector-icon-illustration-animal-nature-icon-concept-isolated-flat_138676-7366.jpg?t=st=1724734621~exp=1724738221~hmac=2aa373ec4f14b4cf9ce0afbbbf7be6d427733adcc6eb7d516b83d834e2ecb301&w=740" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img class="w-14 h-14 md:w-16 md:h-16" src="https://img.freepik.com/free-vector/cute-rabbit-bite-carrot-cartoon-vector-icon-illustration-animal-nature-icon-concept-isolated-flat_138676-7366.jpg?t=st=1724734621~exp=1724738221~hmac=2aa373ec4f14b4cf9ce0afbbbf7be6d427733adcc6eb7d516b83d834e2ecb301&w=740" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                    </div>
+                    <div id="line3" class="flex gap-4 w-screen -translate-x-48 transition-transform ease-linear md:hidden">
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img class="w-14 h-14 md:w-16 md:h-16" src="https://img.freepik.com/free-vector/cute-rabbit-bite-carrot-cartoon-vector-icon-illustration-animal-nature-icon-concept-isolated-flat_138676-7366.jpg?t=st=1724734621~exp=1724738221~hmac=2aa373ec4f14b4cf9ce0afbbbf7be6d427733adcc6eb7d516b83d834e2ecb301&w=740" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img class="w-14 h-14 md:w-16 md:h-16" src="https://img.freepik.com/free-vector/cute-rabbit-bite-carrot-cartoon-vector-icon-illustration-animal-nature-icon-concept-isolated-flat_138676-7366.jpg?t=st=1724734621~exp=1724738221~hmac=2aa373ec4f14b4cf9ce0afbbbf7be6d427733adcc6eb7d516b83d834e2ecb301&w=740" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img class="w-14 h-14 md:w-16 md:h-16" src="https://img.freepik.com/free-vector/cute-rabbit-bite-carrot-cartoon-vector-icon-illustration-animal-nature-icon-concept-isolated-flat_138676-7366.jpg?t=st=1724734621~exp=1724738221~hmac=2aa373ec4f14b4cf9ce0afbbbf7be6d427733adcc6eb7d516b83d834e2ecb301&w=740" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img class="w-14 h-14 md:w-16 md:h-16" src="https://img.freepik.com/free-vector/cute-rabbit-bite-carrot-cartoon-vector-icon-illustration-animal-nature-icon-concept-isolated-flat_138676-7366.jpg?t=st=1724734621~exp=1724738221~hmac=2aa373ec4f14b4cf9ce0afbbbf7be6d427733adcc6eb7d516b83d834e2ecb301&w=740" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img class="w-14 h-14 md:w-16 md:h-16" src="https://img.freepik.com/free-vector/cute-rabbit-bite-carrot-cartoon-vector-icon-illustration-animal-nature-icon-concept-isolated-flat_138676-7366.jpg?t=st=1724734621~exp=1724738221~hmac=2aa373ec4f14b4cf9ce0afbbbf7be6d427733adcc6eb7d516b83d834e2ecb301&w=740" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img class="w-14 h-14 md:w-16 md:h-16" src="https://img.freepik.com/free-vector/cute-rabbit-bite-carrot-cartoon-vector-icon-illustration-animal-nature-icon-concept-isolated-flat_138676-7366.jpg?t=st=1724734621~exp=1724738221~hmac=2aa373ec4f14b4cf9ce0afbbbf7be6d427733adcc6eb7d516b83d834e2ecb301&w=740" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img class="w-14 h-14 md:w-16 md:h-16" src="https://img.freepik.com/free-vector/cute-rabbit-bite-carrot-cartoon-vector-icon-illustration-animal-nature-icon-concept-isolated-flat_138676-7366.jpg?t=st=1724734621~exp=1724738221~hmac=2aa373ec4f14b4cf9ce0afbbbf7be6d427733adcc6eb7d516b83d834e2ecb301&w=740" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img class="w-14 h-14 md:w-16 md:h-16" src="https://img.freepik.com/free-vector/cute-rabbit-bite-carrot-cartoon-vector-icon-illustration-animal-nature-icon-concept-isolated-flat_138676-7366.jpg?t=st=1724734621~exp=1724738221~hmac=2aa373ec4f14b4cf9ce0afbbbf7be6d427733adcc6eb7d516b83d834e2ecb301&w=740" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img class="w-14 h-14 md:w-16 md:h-16" src="https://img.freepik.com/free-vector/cute-rabbit-bite-carrot-cartoon-vector-icon-illustration-animal-nature-icon-concept-isolated-flat_138676-7366.jpg?t=st=1724734621~exp=1724738221~hmac=2aa373ec4f14b4cf9ce0afbbbf7be6d427733adcc6eb7d516b83d834e2ecb301&w=740" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img class="w-14 h-14 md:w-16 md:h-16" src="https://img.freepik.com/free-vector/cute-rabbit-bite-carrot-cartoon-vector-icon-illustration-animal-nature-icon-concept-isolated-flat_138676-7366.jpg?t=st=1724734621~exp=1724738221~hmac=2aa373ec4f14b4cf9ce0afbbbf7be6d427733adcc6eb7d516b83d834e2ecb301&w=740" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img class="w-14 h-14 md:w-16 md:h-16" src="https://img.freepik.com/free-vector/cute-rabbit-bite-carrot-cartoon-vector-icon-illustration-animal-nature-icon-concept-isolated-flat_138676-7366.jpg?t=st=1724734621~exp=1724738221~hmac=2aa373ec4f14b4cf9ce0afbbbf7be6d427733adcc6eb7d516b83d834e2ecb301&w=740" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img class="w-14 h-14 md:w-16 md:h-16" src="https://img.freepik.com/free-vector/cute-rabbit-bite-carrot-cartoon-vector-icon-illustration-animal-nature-icon-concept-isolated-flat_138676-7366.jpg?t=st=1724734621~exp=1724738221~hmac=2aa373ec4f14b4cf9ce0afbbbf7be6d427733adcc6eb7d516b83d834e2ecb301&w=740" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+            </div>
+            
+
+        
+
+        <!-- Step by step -->
+         <div id="steps" class="flex flex-col gap-6 px-6 py-12 max-w-7xl mt-16 mx-auto lg:px-8 lg:mt-32">
+            <h2 class="text-5xl sm:font-semibold mb-14">How it works</h2>
+            <div id="step1" class="rounded-xl border px-8 py-12 flex flex-col lg:flex-row">
+                <div class="flex flex-col gap-6">
+                    <span class="border border-yellow-300 bg-yellow-50 text-yellow-800 w-fit  px-3 py-1 rounded-lg font-medium">Step 1</span>
+                    <h3 class="text-4xl">Bootstrap straight from your web app</h3>
+                    <p class="text-lg  font-semibold">Copy and paste your web app url into Desktop.Customise your app design,app icon and windwo frame UI with no code.</p>
+                    <ul class="grid grid-cols-2 gap-2 ">
+                        <li class="flex gap-4 ">
+                            <i class="fa-solid fa-check text-gray-500"></i>
+                            <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80" href="#">Multiple Windows</a>
+                        </li>
+                        <li class="flex gap-4">
+                            <i class="fa-solid fa-check text-gray-500"></i>
+                            <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80" href="#">Multiple Windows</a>
+                        </li>
+                        <li class="flex gap-4">
+                            <i class="fa-solid fa-check text-gray-500"></i>
+                            <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80" href="#">Multiple Windows</a>
+                        </li>
+                        <li class="flex gap-4">
+                            <i class="fa-solid fa-check text-gray-500"></i>
+                            <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80" href="#">Multiple Windows</a>
+                        </li>
+                        <li class="flex gap-4">
+                            <i class="fa-solid fa-check text-gray-500"></i>
+                            <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80" href="#">Multiple Windows</a>
+                        </li>
+                        <li class="flex gap-4">
+                            <i class="fa-solid fa-check text-gray-500"></i>
+                            <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80" href="#">Multiple Windows</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+
+                <div>
+                    <img src="https://img.freepik.com/free-vector/image-upload-concept-illustration_114360-996.jpg?t=st=1724740945~exp=1724744545~hmac=b95809347724928172751d58ceb0c51359a22684ddb287193485134bbc9bc5eb&w=740" alt="">
+
+                </div>
+            </div>
+            <div id="step2" class="rounded-xl border px-8 py-12 flex flex-col lg:flex-row">
+                <div class="flex flex-col gap-6">
+                    <span class="border border-yellow-300 bg-yellow-50 text-yellow-800 w-fit  px-3 py-1 rounded-lg font-medium">Step 2</span>
+                    <h3 class="text-4xl">Start</h3>
+                    <p class="text-lg  font-semibold">Copy and paste your web app url into Desktop.Customise your app design,app icon and windwo frame UI with no code.</p>
+                    <ul class="grid grid-cols-2 gap-2 ">
+                        <li class="flex gap-4 ">
+                            <i class="fa-solid fa-check text-gray-500"></i>
+                            <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80" href="#">Multiple Windows</a>
+                        </li>
+                        <li class="flex gap-4">
+                            <i class="fa-solid fa-check text-gray-500"></i>
+                            <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80" href="#">Multiple Windows</a>
+                        </li>
+                        <li class="flex gap-4">
+                            <i class="fa-solid fa-check text-gray-500"></i>
+                            <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80" href="#">Multiple Windows</a>
+                        </li>
+                        <li class="flex gap-4">
+                            <i class="fa-solid fa-check text-gray-500"></i>
+                            <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80" href="#">Multiple Windows</a>
+                        </li>
+                        <li class="flex gap-4">
+                            <i class="fa-solid fa-check text-gray-500"></i>
+                            <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80" href="#">Multiple Windows</a>
+                        </li>
+                        <li class="flex gap-4">
+                            <i class="fa-solid fa-check text-gray-500"></i>
+                            <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80" href="#">Multiple Windows</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+
+                <div>
+                    <img src="https://img.freepik.com/free-vector/image-upload-concept-illustration_114360-996.jpg?t=st=1724740945~exp=1724744545~hmac=b95809347724928172751d58ceb0c51359a22684ddb287193485134bbc9bc5eb&w=740" alt="">
+
+                </div>
+            </div>
+            <div id="step3" class="rounded-xl border px-8 py-12 flex flex-col lg:flex-row">
+                <div class="flex flex-col gap-6">
+                    <span class="border border-yellow-300 bg-yellow-50 text-yellow-800 w-fit  px-3 py-1 rounded-lg font-medium">Step 3</span>
+                    <h3 class="text-4xl">Publish</h3>
+                    <p class="text-lg  font-semibold">Copy and paste your web app url into Desktop.Customise your app design,app icon and windwo frame UI with no code.</p>
+                    <ul class="grid grid-cols-2 gap-2 ">
+                        <li class="flex gap-4 ">
+                            <i class="fa-solid fa-check text-gray-500"></i>
+                            <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80" href="#">Multiple Windows</a>
+                        </li>
+                        <li class="flex gap-4">
+                            <i class="fa-solid fa-check text-gray-500"></i>
+                            <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80" href="#">Multiple Windows</a>
+                        </li>
+                        <li class="flex gap-4">
+                            <i class="fa-solid fa-check text-gray-500"></i>
+                            <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80" href="#">Multiple Windows</a>
+                        </li>
+                        <li class="flex gap-4">
+                            <i class="fa-solid fa-check text-gray-500"></i>
+                            <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80" href="#">Multiple Windows</a>
+                        </li>
+                        <li class="flex gap-4">
+                            <i class="fa-solid fa-check text-gray-500"></i>
+                            <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80" href="#">Multiple Windows</a>
+                        </li>
+                        <li class="flex gap-4">
+                            <i class="fa-solid fa-check text-gray-500"></i>
+                            <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80" href="#">Multiple Windows</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+
+                <div>
+                    <img src="https://img.freepik.com/free-vector/image-upload-concept-illustration_114360-996.jpg?t=st=1724740945~exp=1724744545~hmac=b95809347724928172751d58ceb0c51359a22684ddb287193485134bbc9bc5eb&w=740" alt="">
+
+                </div>
+            </div>
+         </div>
+        
+
+        <!-- Bento gird -->
+         <div id="bento-grid" class="px-6 py-12 max-w-7xl mt-16 mx-auto lg:px-8 lg:mt-32">
+            <h2 class="text-5xl sm:font-semibold mb-14">Desktop handles the details</h2>
+            <div id="grid-container" class="flex flex-col gap-6 lg:grid lg:grid-cols-3" style="grid-auto-rows:96px;">
+                <div class="row-start-1 row-end-3 rounded-2xl p-[1px] bg-slate-100 hover:bg-gradient-to-br hover:from-red-200 hover:via-purple-200 hover:to-yellow-200">
+                    <div class="bg-slate-100 rounded-2xl w-full h-full p-6  flex gap-6 flex-col items-center hover:bg-gradient-to-br hover:from-red-50 hover:via-purple-50 hover:to-yellow-50">
+                        <h3 class="text-2xl font-semibold">Native Notifications</h3>
+                        <img src="https://www.todesktop.com/cdn-cgi/image/width=640,height=176,f=auto,fit=cover/feature-images/notifications@3x.png" alt="">
+                    </div>
+                </div>
+                <div class="row-start-1 row-end-4 rounded-2xl p-[1px] bg-slate-100 hover:bg-gradient-to-br hover:from-red-200 hover:via-purple-200 hover:to-yellow-200">
+                    <div class="bg-slate-100 rounded-2xl w-full h-full p-6  flex gap-6 flex-col items-center hover:bg-gradient-to-br hover:from-red-50 hover:via-purple-50 hover:to-yellow-50">
+                        <h3 class="text-2xl font-semibold">Auto Updates</h3>
+                        <p class="text-lg text-center font-light">We’ll ensure the underlying browser is up to date and deliver performance improvements, security patches, & additional features.</p>
+                        <img src="https://www.todesktop.com/cdn-cgi/image/width=640,height=176,f=auto,fit=cover/feature-images/notifications@3x.png" alt="">
+                    </div>
+                </div>
+                <div class="row-start-1 row-end-3 rounded-2xl p-[1px] bg-slate-100 hover:bg-gradient-to-br hover:from-red-200 hover:via-purple-200 hover:to-yellow-200">
+                    <div class="bg-slate-100 rounded-2xl w-full h-full p-6  flex gap-6 flex-col items-center hover:bg-gradient-to-br hover:from-red-50 hover:via-purple-50 hover:to-yellow-50">
+                        <h3 class="text-2xl font-semibold">Native Notifications</h3>
+                        <img src="https://www.todesktop.com/cdn-cgi/image/width=640,height=176,f=auto,fit=cover/feature-images/notifications@3x.png" alt="">
+                    </div>
+                </div>
+                <div class="row-start-3 row-end-6 rounded-2xl p-[1px] bg-slate-100 hover:bg-gradient-to-br hover:from-red-200 hover:via-purple-200 hover:to-yellow-200">
+                    <div class="bg-slate-100 rounded-2xl w-full h-full p-6  flex gap-6 flex-col items-center hover:bg-gradient-to-br hover:from-red-50 hover:via-purple-50 hover:to-yellow-50">
+                        <h3 class="text-2xl font-semibold">Native Notifications</h3>
+                        <p>We’ll ensure the underlying browser is up to date and deliver performance improvements, security patches, & additional features.</p>
+                        <img src="https://www.todesktop.com/cdn-cgi/image/width=640,height=176,f=auto,fit=cover/feature-images/notifications@3x.png" alt="">
+                    </div>
+                </div>
+                <div class="row-start-4 row-end-6 rounded-2xl p-[1px] bg-slate-100 hover:bg-gradient-to-br hover:from-red-200 hover:via-purple-200 hover:to-yellow-200">
+                    <div class="bg-slate-100 rounded-2xl w-full h-full p-6  flex gap-6 flex-col items-center hover:bg-gradient-to-br hover:from-red-50 hover:via-purple-50 hover:to-yellow-50">
+                        <h3 class="text-2xl font-semibold">Native Notifications</h3>
+                        <img src="https://www.todesktop.com/cdn-cgi/image/width=640,height=176,f=auto,fit=cover/feature-images/notifications@3x.png" alt="">
+                    </div>
+                </div>
+                <div class="row-start-3 row-end-6 rounded-2xl p-[1px] bg-slate-100 hover:bg-gradient-to-br hover:from-red-200 hover:via-purple-200 hover:to-yellow-200">
+                    <div class="bg-slate-100 rounded-2xl w-full h-full p-6  flex gap-6 flex-col items-center hover:bg-gradient-to-br hover:from-red-50 hover:via-purple-50 hover:to-yellow-50">
+                        <h3 class="text-2xl font-semibold">Native Notifications</h3>
+                        <img src="https://www.todesktop.com/cdn-cgi/image/width=640,height=176,f=auto,fit=cover/feature-images/notifications@3x.png" alt="">
+                    </div>
+                </div>
+            </div>
+         </div>
+        
+         
+        <!-- companies feature line -->
+         <div id="features-line" class="px-6 py-12 max-w-7xl mt-4 mx-auto lg:px-8 lg:mt-32">
+            <div class="border rounded-lg overflow-hidden flex justify-center p-4">
+                <div id="line4" class="flex gap-8 p-6">
+                    <h3 class="whitespace-nowrap my-0 mx-2 text-2xl font-semibold">Offline Support</h3>
+                    <span>•</span>
+                    <h3 class="whitespace-nowrap my-0 mx-2 text-2xl font-semibold">Download Analytics</h3>
+                    <span>•</span>
+                    <h3 class="whitespace-nowrap my-0 mx-2 text-2xl font-semibold">Global Hotkeys</h3>
+                    <span>•</span>
+                    <h3 class="whitespace-nowrap my-0 mx-2 text-2xl font-semibold">Custom Menus</h3>
+                    <span>•</span>
+                    <h3 class="whitespace-nowrap my-0 mx-2 text-2xl font-semibold">Multi-window support</h3>
+                    <span>•</span>
+                    <h3 class="whitespace-nowrap my-0 mx-2 text-2xl font-semibold">Trays</h3>
+                    <span>•</span>
+                
+                </div>
+            </div>
+         </div>
+
+    
+        <!-- testimonials -->
+         <div id="testimonials" class="px-6 py-12 max-w-7xl mt-4 mx-auto lg:px-8 lg:mt-32">
+            <h2 class="text-5xl sm:font-semibold mb-14">Customer stories</h2>
+            <div class="rounde-xl border flex flex-col lg:flex-row items-end">
+                <div id="left" class="flex flex-col gap-12 p-8">
+                    <div class="h-4 w-fit">
+                        <img src="https://www.todesktop.com/_app/immutable/assets/ClickUp-Logo.odzVA-s0.svg" alt="">
+                    </div>
+                    <h3 class="text-xl leading-relaxed">ClickUp used ToDesktop to get their desktop app in front of customers in days instead of months.</h3>
+                    <div id="tag-container" class="flex gap-3 flex-wrap">
+                       <div class="flex gap-2 items-center justify-center bg-yellow-50 w-fit border border-yellow-300 px-3 py-1 rounded text-yellow-800">
+                        <i class="fa-solid fa-check"></i>
+                        <span class="font-medium">Chromeless UI</span>
+                       </div> 
+                       <div class="flex gap-2 items-center justify-center bg-yellow-50 w-fit border border-yellow-300 px-3 py-1 rounded text-yellow-800">
+                        <i class="fa-solid fa-check"></i>
+                        <span class="font-medium">Native spellcheck</span>
+                       </div> 
+                       <div class="flex gap-2 items-center justify-center bg-yellow-50 w-fit border border-yellow-300 px-3 py-1 rounded text-yellow-800">
+                        <i class="fa-solid fa-check"></i>
+                        <span class="font-medium">Task time in menubar</span>
+                       </div> 
+                       <div class="flex gap-2 items-center justify-center bg-yellow-50 w-fit border border-yellow-300 px-3 py-1 rounded text-yellow-800">
+                        <i class="fa-solid fa-check"></i>
+                        <span class="font-medium">Notification count in the dock</span>
+                       </div> 
+                       <div class="flex gap-2 items-center justify-center bg-yellow-50 w-fit border border-yellow-300 px-3 py-1 rounded text-yellow-800">
+                        <i class="fa-solid fa-check"></i>
+                        <span class="font-medium">Global hotkey to create task</span>
+                       </div> 
+                    </div>
+                    <p class="text-lg font-light text-gray-500">
+                        “ToDesktop provided us with a <span class="text-black">polished desktop app</span> in no time. Their expert team guided us through a smooth migration from our outdated legacy desktop app, enabling us to deliver <span class="text-black">new and improved features</span> to our customers within days.”
+                    </p>
+                    <div id="user-card" class="flex gap-4">
+                        <div class="w-14 ">
+                            <img class="rounded-full" src="https://img.freepik.com/premium-vector/user-profile-interface-elements-illustration-ui_1278800-7892.jpg?w=900" alt="">
+                        </div>
+                        <div class="flex flex-col">
+                            <h3 class="font-medium">Sameer</h3>
+                            <p class="text-gray-500">Founder & CEO, <a class="border-b border-dotted border-gray-400 hover:border-solid hover:border-gray-800" href="#">ClickUP</a></p>
+                        </div>
+                    </div>
+                    
+
+                </div>
+                <div id="right" class="pl-12">
+                    <img src="https://www.todesktop.com/cdn-cgi/image/width=1920,f=auto,fit=cover/_app/immutable/assets/Customer-Story-ClickUp.6otznAf7.png" alt="">
+                </div>
+            </div>
+
+
+            <!-- cards -->
+             <div class="flex flex-col lg:flex-row justify-between gap-4 mt-6">
+                <div class="flex flex-col p-6 gap-6 rounded-2xl  bg-slate-100 hover:bg-gradient-to-br hover:from-red-200 hover:via-purple-200 hover:to-yellow-200">
+                    <div class="flex  items-center gap-4">
+                        <div class="w-12 h-12 bg-blue-200 flex items-center justify-center rounded-full">
+                            <i class="fa-solid fa-code text-indigo-800"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold">Native APIs</h3>
+                    </div>
+                    <p class="text-lg font-light">“What sets ToDesktop apart is its seamless integration with native APIs using our existing web codebase. By tapping into APIs like Tray and Notifications, we've crafted an exceptionally polished desktop user experience. ”</p>
+                    <div class="flex gap-4">
+                        <div class="flex">
+                            <div class="-mr-3 w-12 h-12 flex justify-center rounded-full border border-white">
+                                <img src="https://www.todesktop.com/cdn-cgi/image/width=120,height=120,f=auto,fit=cover/_app/immutable/assets/customer-logo-Rise._nYytet0.png" alt="">
+                            </div>
+                            <div class="w-12 h-12 rounded-full overflow-hidden border border-white">
+                                <img src="https://www.todesktop.com/cdn-cgi/image/width=96,height=96,f=auto,fit=cover/_app/immutable/assets/Rick.d7xHnafE.jpg" alt="">
+                            </div>
+                            
+                        </div>
+                        <div class="flex flex-col">
+                            <h3>Sameer</h3>
+                            <a href="#" class="border-b border-dashed border-gray-500 hover:border-black w-fit text-gray-500">Rise</a>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                <div class="flex flex-col p-6 gap-6 rounded-2xl  bg-slate-100 hover:bg-gradient-to-br hover:from-red-200 hover:via-purple-200 hover:to-yellow-200">
+                    <div class="flex  items-center gap-4">
+                        <div class="w-12 h-12 bg-blue-200 flex items-center justify-center rounded-full">
+                            <i class="fa-solid fa-code text-indigo-800"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold">Native APIs</h3>
+                    </div>
+                    <p class="text-lg font-light">“What sets ToDesktop apart is its seamless integration with native APIs using our existing web codebase. By tapping into APIs like Tray and Notifications, we've crafted an exceptionally polished desktop user experience. ”</p>
+                    <div class="flex gap-4">
+                        <div class="flex">
+                            <div class="-mr-3 w-12 h-12 flex justify-center rounded-full border border-white">
+                                <img src="https://www.todesktop.com/cdn-cgi/image/width=120,height=120,f=auto,fit=cover/_app/immutable/assets/customer-logo-Rise._nYytet0.png" alt="">
+                            </div>
+                            <div class="w-12 h-12 rounded-full overflow-hidden border border-white">
+                                <img src="https://www.todesktop.com/cdn-cgi/image/width=96,height=96,f=auto,fit=cover/_app/immutable/assets/Rick.d7xHnafE.jpg" alt="">
+                            </div>
+                            
+                        </div>
+                        <div class="flex flex-col">
+                            <h3>Sameer</h3>
+                            <a href="#" class="border-b border-dashed border-gray-500 hover:border-black w-fit text-gray-500">Rise</a>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                <div class="flex flex-col p-6 gap-6 rounded-2xl  bg-slate-100 hover:bg-gradient-to-br hover:from-red-200 hover:via-purple-200 hover:to-yellow-200">
+                    <div class="flex  items-center gap-4">
+                        <div class="w-12 h-12 bg-blue-200 flex items-center justify-center rounded-full">
+                            <i class="fa-solid fa-code text-indigo-800"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold">Native APIs</h3>
+                    </div>
+                    <p class="text-lg font-light">“What sets ToDesktop apart is its seamless integration with native APIs using our existing web codebase. By tapping into APIs like Tray and Notifications, we've crafted an exceptionally polished desktop user experience. ”</p>
+                    <div class="flex gap-4">
+                        <div class="flex">
+                            <div class="-mr-3 w-12 h-12 flex justify-center rounded-full border border-white">
+                                <img src="https://www.todesktop.com/cdn-cgi/image/width=120,height=120,f=auto,fit=cover/_app/immutable/assets/customer-logo-Rise._nYytet0.png" alt="">
+                            </div>
+                            <div class="w-12 h-12 rounded-full overflow-hidden border border-white">
+                                <img src="https://www.todesktop.com/cdn-cgi/image/width=96,height=96,f=auto,fit=cover/_app/immutable/assets/Rick.d7xHnafE.jpg" alt="">
+                            </div>
+                            
+                        </div>
+                        <div class="flex flex-col">
+                            <h3>Sameer</h3>
+                            <a href="#" class="border-b border-dashed border-gray-500 hover:border-black w-fit text-gray-500">Rise</a>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+             </div>
+
+             <div class="rounde-xl bg-black flex flex-col lg:flex-row  mt-6 lg:pt-10">
+                <div id="left" class="flex flex-col gap-4 p-8 flex-1">
+                    <span class="text-gray-400 font-display font-medium">Ready to start building?</span>
+                    <h2 class="text-4xl  text-white leading-tight">Create your desktop app for free*</h2>
+                    
+                    <p class="text-lg font-light text-gray-300">
+                        ToDesktop Builder will take you step-by-step through the process of creating your first desktop app in just a few minutes.
+                    </p>
+                    
+                    <button class="bg-blue-500 text-white py-3 rounded-lg hover:bg-opacity-90 flex gap-4 justify-center items-center">
+                        <span>Download To Desktop Builder </span>
+                        <i class="fa-solid fa-download"></i>
+                    </button>
+                    <p class="text-gray-400 text-xs italic leading-tight">*You can create a desktop app and run it on your computer for free. You will only be charged if you want to create a distributable app for your customers.</p>
+                    
+
+                </div>
+                <div id="right" class="lg:w-1/2">
+                    <img src="https://www.todesktop.com/cdn-cgi/image/width=1920,f=auto,fit=cover/_app/immutable/assets/Customer-Story-ClickUp.6otznAf7.png" alt="">
+                </div>
+            </div>
+
+   
+
+
+            </div>
+         </div>
+
+        <!-- pricing -->
+         <div id="pricing" class="ml-6">
+            <h2 class="text-5xl font-semibold max-w-2xl leading-normal">Choose a plan that fits your needs</h2>
+            <div class="flex flex-col lg:flex-row mt-6 gap-6 ">
+                <div class="border rounded-xl px-8 pt-12 pb-8 flex flex-col gap-6 lg:border-none lg:bg-slate-100">
+                    <h3 class="text-4xl">Free</h3>
+                    <p class="text-lg font-light">For personal use or testing your app before deploying to customers.</p>
+                    <p class="uppercase">key features</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-4">
+                            <i class="fa-solid fa-check"></i>
+                            <span class="text-lg text-gray-800">Free for personal use</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="fa-solid fa-check"></i>
+                            <span class="text-lg text-gray-800">Run app locally</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="fa-solid fa-xmark"></i>
+                            <span class="text-lg text-gray-800">No Code Signing</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="fa-solid fa-xmark"></i>
+                            <span class="text-lg text-gray-800">No Native Installers</span>
+                        </li>
+                    </ul>
+                    <button class="border px-8 py-3 text-blue-600 font-bold rounded-xl border-gray-400 hover:border-gray-800">
+                        Read Docs
+                    </button>
+                </div>
+                <div class="border rounded-xl px-8 pt-12 pb-8 flex flex-col gap-6 lg:border-none lg:bg-slate-100">
+                    <h3 class="text-4xl">Free</h3>
+                    <p class="text-lg font-light">For personal use or testing your app before deploying to customers.</p>
+                    <p class="uppercase">key features</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-4">
+                            <i class="fa-solid fa-check"></i>
+                            <span class="text-lg text-gray-800">Free for personal use</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="fa-solid fa-check"></i>
+                            <span class="text-lg text-gray-800">Run app locally</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="fa-solid fa-xmark"></i>
+                            <span class="text-lg text-gray-800">No Code Signing</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="fa-solid fa-xmark"></i>
+                            <span class="text-lg text-gray-800">No Native Installers</span>
+                        </li>
+                    </ul>
+                    <button class="border px-8 py-3 text-blue-600 font-bold rounded-xl border-gray-400 hover:border-gray-800">
+                        Read Docs
+                    </button>
+                </div>
+                <div class="border relative rounded-xl px-8 pt-12 pb-8 flex flex-col gap-6 lg:border-none lg:bg-slate-100">
+                    <p class="text-blue-800 text-sm bg-indigo-100 border rounded-full w-fit px-4 py-2 absolute top-0 right-8 -translate-y-1/2 font-semibold">Most popular</p>    
+                    <h3 class="text-4xl">Free</h3>
+                    <p class="text-lg font-light">For personal use or testing your app before deploying to customers.</p>
+                    <p class="uppercase">key features</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-4">
+                            <i class="fa-solid fa-check"></i>
+                            <span class="text-lg text-gray-800">Free for personal use</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="fa-solid fa-check"></i>
+                            <span class="text-lg text-gray-800">Run app locally</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="fa-solid fa-xmark"></i>
+                            <span class="text-lg text-gray-800">No Code Signing</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="fa-solid fa-xmark"></i>
+                            <span class="text-lg text-gray-800">No Native Installers</span>
+                        </li>
+                    </ul>
+                    <button class="border px-8 py-3 bg-blue-600 text-white font-bold rounded-xl border-gray-400 hover:border-gray-800">
+                        Read Docs
+                    </button>
+                </div>
+            </div>
+         </div>
+
+
+         <!-- FAQS -->
+        <div class="px-6 py-12 mt-16">
+            <h2 class="text-5xl font-semibold">FAQs</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 mt-6 gap-6 items-start">
+                <div class="group rounded-xl border border-gray-200 bg-gray-50 p-6">
+                    <dt class="flex justify-between items-center" aria-controls="faq-1">
+                        <p class="font-semibold text-lg">Is ToDesktop For Me?</p>
+                        <i class="fa-solid fa-chevron-up -rotate-180 transition"></i>
+                    </dt>
+                    <dd id="faq-1" class="hidden text-lg font-light mt-6">
+                        <p>That depends! If you would like to distribute your web app to your users as a downloadable desktop app then ToDesktop is for you.</p>
+                    </dd>
+                </div>
+                <div class="group rounded-xl border border-gray-200 bg-gray-50 p-6">
+                    <dt class="flex justify-between items-center" aria-controls="faq-2">
+                        <p class="font-semibold text-lg">Is ToDesktop For Me?</p>
+                        <i class="fa-solid fa-chevron-up -rotate-180 transition"></i>
+                    </dt>
+                    <dd id="faq-2" class="hidden text-lg font-light mt-6">
+                        <p>That depends! If you would like to distribute your web app to your users as a downloadable desktop app then ToDesktop is for you.</p>
+                    </dd>
+                </div>
+                <div class="group rounded-xl border border-gray-200 bg-gray-50 p-6">
+                    <dt class="flex justify-between items-center" aria-controls="faq-3">
+                        <p class="font-semibold text-lg">Is ToDesktop For Me?</p>
+                        <i class="fa-solid fa-chevron-up -rotate-180 transition"></i>
+                    </dt>
+                    <dd id="faq-3" class="hidden text-lg font-light mt-6">
+                        <p>That depends! If you would like to distribute your web app to your users as a downloadable desktop app then ToDesktop is for you.</p>
+                    </dd>
+                </div>
+                <div class="group rounded-xl border border-gray-200 bg-gray-50 p-6">
+                    <dt class="flex justify-between items-center" aria-controls="faq-4">
+                        <p class="font-semibold text-lg">Is ToDesktop For Me?</p>
+                        <i class="fa-solid fa-chevron-up -rotate-180 transition"></i>
+                    </dt>
+                    <dd id="faq-4" class="hidden text-lg font-light mt-6">
+                        <p>That depends! If you would like to distribute your web app to your users as a downloadable desktop app then ToDesktop is for you.</p>
+                    </dd>
+                </div>
+                <div class="group rounded-xl border border-gray-200 bg-gray-50 p-6">
+                    <dt class="flex justify-between items-center" aria-controls="faq-5">
+                        <p class="font-semibold text-lg">Is ToDesktop For Me?</p>
+                        <i class="fa-solid fa-chevron-up -rotate-180 transition"></i>
+                    </dt>
+                    <dd id="faq-5" class="hidden text-lg font-light mt-6">
+                        <p>That depends! If you would like to distribute your web app to your users as a downloadable desktop app then ToDesktop is for you.</p>
+                    </dd>
+                </div>
+                <div class="group rounded-xl border border-gray-200 bg-gray-50 p-6">
+                    <dt class="flex justify-between items-center" aria-controls="faq-6">
+                        <p class="font-semibold text-lg">Is ToDesktop For Me?</p>
+                        <i class="fa-solid fa-chevron-up -rotate-180 transition"></i>
+                    </dt>
+                    <dd id="faq-6" class="hidden text-lg font-light mt-6">
+                        <p>That depends! If you would like to distribute your web app to your users as a downloadable desktop app then ToDesktop is for you.</p>
+                    </dd>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <footer class="px-6 py-12 mt-6">
+            <div class="rounded-lg border bg-gray-50 flex  flex-col lg:flex-row-reverse items-center px-8 py-12 gap-8 lg:border-none lg:bg-gray-100">
+                <a href="#" class="font-light">Documentation</a>
+                <div class="flex gap-8 text-lg">
+                    <a href="#" class="text-gray-600 hover:text-gray-900"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="text-gray-600 hover:text-gray-900"><i class="fa-brands fa-github"></i></a>
+                </div>
+                <a href="#" id="brand"  class="flex gap-2 items-center flex-1">
+                    <img  src="https://img.freepik.com/premium-photo/alphabet-s-english-colorful-letters-handmade-letters-molded-from-plasticine-clay-isolated-white-background_44074-7066.jpg?w=900" alt="" class="h-10 w-15 object-cover max-w-12 max-h-12">
+                    <span class="text-lg font-bold font-mono">Sameer</span>
+                </a>
+
+            </div>
+            <div id="sub-fotter" class="flex flex-col gap-6 items-center my-12">
+                <div class="flex gap-2 items-center">
+                    <img class="w-4 h-4" src="https://www.todesktop.com/_app/immutable/assets/y-combinator-logo.VDo9bew9.svg" alt="">
+                    <p class="text-sm text-gray-600"> A Y Combinator company.</p>
+                </div>
+                <p class="text-sm text-gray-400">© 2024 ToDesktop, Inc. All rights reserved.</p>
+            </div>
+        </footer>
+
+
+        <div class="rounded-2xl p-[3px] bg-slate-100 hover:bg-gradient-to-br hover:from-red-300 hover:via-purple-300 hover:to-yellow-300">
+            <div class="bg-slate-100 rounded-2xl w-full h-full p-6  flex gap-6 flex-col items-center hover:bg-gradient-to-br hover:from-red-50 hover:via-purple-50 hover:to-yellow-50">
+                <h3 class="text-2xl font-semibold">Native Notifications</h3>
+                <img src="https://www.todesktop.com/cdn-cgi/image/width=640,height=176,f=auto,fit=cover/feature-images/notifications@3x.png" alt="">
+            </div>
+        </div>
+
+
+       </div>
+        
+        <div class="h-[50px]"></div>
+     </main>
+
+</body>
+    <script src="./script.js"></script>
+</html>
